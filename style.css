@@ -1,0 +1,183 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e9d5ff, #dbeafe);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    width: 100%;
+    max-width: 520px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    color: #6d28d9;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #777;
+    font-size: 14px;
+}
+
+.input-box {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    min-width: 0;
+    padding: 13px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+}
+
+input:focus {
+    border-color: #8b5cf6;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 9px;
+    padding: 11px 15px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+#addBtn {
+    background: #7c3aed;
+    color: white;
+}
+
+#addBtn:hover {
+    background: #5b21b6;
+}
+
+.filters {
+    display: flex;
+    gap: 8px;
+    margin: 22px 0;
+}
+
+.filter {
+    flex: 1;
+    background: #f3f0ff;
+    color: #6d28d9;
+    font-size: 13px;
+    padding: 10px 5px;
+}
+
+.filter.active {
+    background: #7c3aed;
+    color: white;
+}
+
+#taskList {
+    list-style: none;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f9f8ff;
+    padding: 13px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    overflow-wrap: anywhere;
+}
+
+.task input[type="checkbox"] {
+    flex: 0 0 17px;
+    width: 17px;
+    height: 17px;
+    accent-color: #7c3aed;
+    cursor: pointer;
+}
+
+.task-text {
+    flex: 1;
+    color: #333;
+}
+
+.task.done .task-text {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.delete-btn {
+    background: #fee2e2;
+    color: #dc2626;
+    padding: 8px 10px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    color: #666;
+    font-size: 13px;
+}
+
+#clearBtn {
+    background: #ede9fe;
+    color: #6d28d9;
+    font-size: 12px;
+}
+
+.empty {
+    text-align: center;
+    color: #999;
+    padding: 25px 0;
+}
+
+@media (max-width: 450px) {
+    .container {
+        padding: 20px 15px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .input-box {
+        gap: 6px;
+    }
+
+    .footer {
+        flex-wrap: wrap;
+    }
+
+    .filters {
+        gap: 5px;
+    }
+
+    .filter {
+        font-size: 12px;
+    }
+}
